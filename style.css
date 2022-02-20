@@ -78,6 +78,8 @@ section {
     margin-right: 12px;
 
     background-color: rgb(235, 85, 69);
+    box-shadow: 0 0px 10px rgba(235, 85, 69, 0.5);
+    border: 1px solid rgb(235, 85, 69, 0.1);
 }
 
 .call-accept {
@@ -88,6 +90,8 @@ section {
     width: 35px;
     border-radius: 50%;
     background-color: rgb(103, 206, 103);
+    box-shadow: 0 0px 10px rgba(103, 206, 103, 0.5);
+    border: 1px solid rgb(103, 206, 103, 0.1);
 }
 
 .call-icon {
@@ -167,10 +171,52 @@ section {
 .notif-title {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .notif-title-text {
     margin: 2px;
+    margin-left: 5px;
     font-size: 15px;
     font-family: 'SF-Pro-Text-Semibold', sans-serif;
+}
+
+.notif-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.home {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: rgba(255, 255, 255, 0.541);
+}
+
+.home-icon {
+    fill: rgba(255, 255, 255, 0.541);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 0.6);
+    transition-duration: 300ms
+}
+
+.home-icon:hover {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 1);
+    transform: rotate(90deg);
+
 }
