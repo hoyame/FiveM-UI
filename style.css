@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "SF-Pro-Text-Bold";
+    src: url("nui://zebi/fonts/SF-Pro-Display-Bold.otf"),
+      url("./fonts/SF-Pro-Display-Bold.otf");
+}
+  
+@font-face {
+    font-family: "SF-Pro-Text-Regular";
+    src: url("nui://zebi/fonts/SF-Pro-Display-Regular.otf"),
+      url("./fonts/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+    font-family: "SF-Pro-Text-Semibold";
+    src: url("nui://zebi/fonts/SF-Pro-Display-Semibold.otf"),
+      url("./fonts/SF-Pro-Display-Semibold.otf");
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    background: #161623;
+    overflow: hidden;
+}
+
+.box-t {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.box {
+    width: 350px;
+    height: 400px;
+    transform: translate(650px, 350px);
+    border-radius: 10px;
+
+}
+
+.call {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22.5px;
+    font-family: 'SF-Pro-Text-Bold', sans-serif;
+
+    text-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+
+    line-height: 19px;
+    font-size: 19px;
+    color: #fff;
+}
+
+.call-refuse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 12px;
+
+    background-color: rgb(235, 85, 69);
+}
+
+.call-accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: rgb(103, 206, 103);
+}
+
+.call-icon {
+    width: 17.5px;
+    height: 17.5px;
+    fill: #fff;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.hud {
+    position: absolute;
+    left: 15px;
+    bottom: 200px;
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    padding: 11px 12.5px;
+    color: #fff;
+    font-family: "SF-Pro-Text-Semibold";
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hud-content {
+    margin-top: 5px;
+    height: 13px;
+    width: 100%;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+}
+
+
+.hud-food {
+    height: 13px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #1ec247;
+    box-shadow: 0 0px 10px #1ec247a6;
+    border: 1px solid #1ec2472a;
+}
+
+
+.hud-wird {
+    height: 13px;
+    width: 40%;
+    border-radius: 10px;
+
+    background-color: #1977db;
+    box-shadow: 0 0px 10px #1ec24785;
+    border: 1px solid #1ec2472d;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.notif {
+    position: absolute;
+    right: 15px;
+    top: 130px;
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    padding: 12.5px;
+
+    display: flex;
+    flex-direction: row;
+
+    color: #fff;
+
+}
+
+.notif-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.notif-title-text {
+    margin: 2px;
+    font-size: 15px;
+    font-family: 'SF-Pro-Text-Semibold', sans-serif;
+}
