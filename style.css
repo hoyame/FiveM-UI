@@ -28,7 +28,7 @@
 section {
     position: relative;
     min-height: 100vh;
-    background: #161623;
+    /* background: #161623; */
     overflow: hidden;
 }
 
@@ -195,7 +195,7 @@ section {
 .home {
     position: absolute;
     left: 20px;
-    top: 25px;
+    top: 45px;
 
     height: 45px;
     width: 45px;
@@ -236,7 +236,7 @@ section {
 .home-open {
     position: absolute;
     left: 20px;
-    top: 25px;
+    top: 45px;
 
     width: 400px;
     border-radius: 15px;
