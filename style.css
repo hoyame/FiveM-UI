@@ -61,7 +61,7 @@ section {
     padding: 0 22.5px;
     font-family: 'SF-Pro-Text-Bold', sans-serif;
 
-    text-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0px 10px rgba(255, 255, 255, 0.3);
 
     line-height: 19px;
     font-size: 19px;
@@ -133,9 +133,10 @@ section {
     height: 13px;
     width: 30%;
     border-radius: 10px;
-    background-color: #1ec247;
-    box-shadow: 0 0px 10px #1ec247a6;
-    border: 1px solid #1ec2472a;
+
+    background-color: rgb(103, 206, 103);
+    box-shadow: 0 0px 10px rgba(103, 206, 103, 0.5);
+    border: 1px solid rgb(103, 206, 103, 0.1);
 }
 
 
@@ -203,7 +204,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    fill: rgba(255, 255, 255, 0.541);
 }
 
 .home-icon {
@@ -218,5 +218,81 @@ section {
     fill-opacity: 0.2;
     stroke: rgba(255, 255, 255, 1);
     transform: rotate(90deg);
+    cursor: pointer;
 
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.home-c-icon {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+
+}
+
+.home-open {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-family: 'SF-Pro-Text-Semibold', sans-serif;
+    color: #fff;
+}
+
+.home-icon-open {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 300ms
+}
+
+.icon-active {
+    fill:rgb(103, 206, 103);
+}
+
+.icon-disabled {
+    fill:rgba(255, 255, 255, 0.425);
+}
+
+.icon-stop {
+    fill:rgb(235, 85, 69);
+}
+
+.home-app-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 50px;
+    width:50px;
+    border-radius: 7.5px;
+    border: 1px solid rgba(255, 255, 255, 0.425);
+    transition-duration: 400ms;
+    margin: 0 3.3px;
+    margin-bottom: 8px;
+}
+
+.home-app-c:hover {
+    background: #fff;
+    fill: #000;
+}
+
+.home-app-c:hover svg {
+    fill: #000;
+}
+
+.home-app-icon {
+    fill: rgba(255, 255, 255, 0.425);
+}
+
+.home-app-icon:hover {
+    fill: #000;
 }
