@@ -28,7 +28,7 @@
 section {
     position: relative;
     min-height: 100vh;
-    /* background: #161623; */
+    background: #161623;
     overflow: hidden;
 }
 
@@ -44,7 +44,6 @@ section {
     height: 400px;
     transform: translate(650px, 350px);
     border-radius: 10px;
-
 }
 
 .call {
@@ -158,12 +157,11 @@ section {
     right: 15px;
     top: 130px;
     width: 300px;
-    height: 75px;
     border-radius: 15px;
-    padding: 12.5px;
+    padding: 13px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     color: #fff;
 
@@ -172,14 +170,19 @@ section {
 .notif-title {
     display: flex;
     flex-direction: row;
+    height: 20px;
+    align-items: center;
     width: 100%;
+    margin-bottom: 7.5px;
+
+    
 }
 
 .notif-title-text {
     margin: 2px;
     margin-left: 5px;
     font-size: 15px;
-    font-family: 'SF-Pro-Text-Semibold', sans-serif;
+    font-family: 'SF-Pro-Text-Semibold';
 }
 
 .notif-component {
@@ -188,6 +191,13 @@ section {
     justify-content: space-between;
     height: 25px;
     width: 100%;
+}
+
+.notif-content {
+    font-weight: 300;
+    font-size: 13px;
+    opacity: 0.7;
+    font-family: 'SF-Pro-Text-Regular', sans-serif;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -225,11 +235,11 @@ section {
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 .home-c-icon {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
 
 }
 
@@ -238,7 +248,6 @@ section {
     left: 20px;
     top: 45px;
 
-    width: 400px;
     border-radius: 15px;
 
     font-size: 18px;
@@ -265,33 +274,18 @@ section {
     fill:rgb(235, 85, 69);
 }
 
-.home-app-c {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    height: 50px;
-    width:50px;
-    border-radius: 7.5px;
-    border: 1px solid rgba(255, 255, 255, 0.425);
-    transition-duration: 400ms;
-    margin: 0 3.3px;
-    margin: 5px 0;
-}
-
-.home-app-c:hover {
-    background: #fff;
-    fill: #000;
-}
-
 .home-app-c:hover svg {
     fill: #000;
 }
 
 .home-app-icon {
     fill: rgba(255, 255, 255, 0.425);
+    transition-duration: 400ms;
+    height: 15px;
+    margin-left: 10px;
 }
 
 .home-app-icon:hover {
-    fill: #000;
+    fill: #fff;
+    cursor: pointer;
 }
