@@ -28,7 +28,7 @@
 section {
     position: relative;
     min-height: 100vh;
-    /* background: #161623; */
+    background: #161623;
     overflow: hidden;
 }
 
@@ -83,6 +83,7 @@ section {
     background-color: rgb(235, 85, 69);
     box-shadow: 0 0px 10px rgba(235, 85, 69, 0.5);
     border: 1px solid rgb(235, 85, 69, 0.1);
+    transition-duration: 400ms;
 }
 
 .call-speaker {
@@ -97,6 +98,7 @@ section {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
     border: 1px solid rgb(235, 85, 69, 0.1);
+    transition-duration: 400ms;
 }
 
 .call-accept {
@@ -109,6 +111,22 @@ section {
     background-color: rgb(103, 206, 103);
     box-shadow: 0 0px 10px rgba(103, 206, 103, 0.5);
     border: 1px solid rgb(103, 206, 103, 0.1);
+    transition-duration: 400ms;
+}
+
+.call-speaker:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.call-accept:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.call-refuse:hover {
+    opacity: 0.75;
+    cursor: pointer;
 }
 
 .call-icon {
@@ -183,6 +201,7 @@ section {
 
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 
     color: #fff;
 
@@ -223,11 +242,13 @@ section {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
-.home {
+.left-container {
     position: absolute;
     left: 20px;
     top: 45px;
+}
 
+.home {
     height: 45px;
     width: 45px;
     border-radius: 15px;
@@ -235,6 +256,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-bottom: 10px;
 }
 
 .home-icon {
@@ -265,10 +288,7 @@ section {
 }
 
 .home-open {
-    position: absolute;
-    left: 20px;
-    top: 45px;
-
+    margin-bottom: 10px;
     border-radius: 15px;
 
     font-size: 18px;
@@ -309,4 +329,125 @@ section {
 .home-app-icon:hover {
     fill: #fff;
     cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.keypad {
+    padding-bottom: 15px;
+    width: 225px;
+    border-radius: 15px;
+    font-family: "SF-Pro-Text-Bold";
+
+}
+
+.keypad-row {
+    display: flex;
+    justify-content: center;
+}
+
+.keypad-header {
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.keypad-number {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22.5px;
+    color: #fff;
+    font-family: "SF-Pro-Text-Semibold";
+}
+
+.keypad-btn {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    padding-top: 7.5px;
+    margin: 6px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    color: #fff;
+    transition-duration: 250ms;
+
+    font-size: 20px;
+    font-family: "SF-Pro-Text-Bold";
+    font-weight: 800;
+}
+
+.keypad-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    cursor: pointer;
+}
+
+#call-btn {
+    background-color: #63c366;
+    border: 1px solid #63c366;
+    fill: white;
+    margin-left: 60px;
+    transition-duration: 250ms;
+}
+
+#call-btn:hover {
+    background-color: rgb(47, 170, 51);
+    border: 1px solid rgb(47, 170, 51);
+}
+
+#call-icon {
+    width: 20px;
+    margin-top: 7.5px;
+    margin-left: 10px;
+}
+
+.keypad-letters {
+    margin-top: -3px;
+    font-size: 7px;
+    font-family: "SF-Pro-Text-Bold";
+    letter-spacing: -0.3px;
+}
+
+#asterisk {
+    font-size: 35px;
+    font-weight: 100;
+    vertical-align: middle;
+    line-height: 45px;
+}
+
+#plus {
+    margin-top: -6px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+#sharp-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 12px;
+    margin-top: 5px;
+    fill: #fff;
+}
+
+#delete-icon {
+    fill: #e5e5e5;
+    width: 20px;
+    margin-top: 10px;
+    height: 25px;
+}
+
+#delete-icon:hover  {
+    fill: #919191;
+
+    cursor: pointer;
+}
+
+#keypad-delete {
+    margin: 8px;
+    padding: 5px;
+    padding-right: 30px;
+    width: 20px;
 }
