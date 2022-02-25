@@ -5,7 +5,7 @@ import './Keypad.scss';
 export function Keypad() {
     const [number, setNumber] = useState('');
 
-    const onPressKey = (key: string) => {
+    const onPressKey = (key: number) => {
         number.length < 8 && setNumber(number + key)
     }
 
