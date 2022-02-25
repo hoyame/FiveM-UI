@@ -1,0 +1,100 @@
+
+.home {
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.home-icon {
+    fill: rgba(255, 255, 255, 0.541);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 0.6);
+    transition-duration: 300ms
+}
+
+.home-icon:hover {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 1);
+    transform: rotate(90deg);
+    cursor: pointer;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes open {
+    from {
+        padding-left: 25px;
+        width: 45px;
+    }
+    to {
+        width: 512px;
+    }
+}
+
+.home-c-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+
+}
+
+.home-open {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    height: 45px;
+    font-size: 18px;
+    font-family: 'SF-Pro-Text-Semibold', sans-serif;
+    color: #fff;
+    overflow: none;    
+    animation-duration: 400ms;
+    animation-name: open;
+}
+
+.home-open:active {
+
+}
+
+.home-icon-open {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 0.2;
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 300ms
+}
+
+.icon-active {
+    fill:rgb(103, 206, 103);
+}
+
+.icon-disabled {
+    fill:rgba(255, 255, 255, 0.425);
+}
+
+.icon-stop {
+    fill:rgb(235, 85, 69);
+}
+
+.home-app-c:hover svg {
+    fill: #000;
+}
+
+.home-app-icon {
+    fill: rgba(255, 255, 255, 0.425);
+    transition-duration: 400ms;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.home-app-icon:hover {
+    fill: #fff;
+    cursor: pointer;
+}

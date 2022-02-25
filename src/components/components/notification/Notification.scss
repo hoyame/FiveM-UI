@@ -1,0 +1,47 @@
+
+.notif {
+
+    width: 300px;
+    border-radius: 15px;
+    padding: 13px;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    color: #fff;
+
+}
+
+.notif-title {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 7.5px;
+
+    
+}
+
+.notif-title-text {
+    margin: 2px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: 'SF-Pro-Text-Semibold';
+}
+
+.notif-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    width: 100%;
+}
+
+.notif-content {
+    font-weight: 300;
+    font-size: 13px;
+    opacity: 0.7;
+    font-family: 'SF-Pro-Text-Regular', sans-serif;
+}
