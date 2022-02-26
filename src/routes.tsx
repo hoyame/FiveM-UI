@@ -1,13 +1,19 @@
 import React from 'react';
 
-const HomeScreen = React.lazy(() => import('./components/home/home'));
+const Home = React.lazy(() => import('./components/home/home'));
+const Message = React.lazy(() => import('./components/apps/message/Message'));
 
 const routes = [
     {
         path: '/',
-        component: HomeScreen,
+        component: Home,
         exact: true
-    }
+    },
+    {
+        path: '/message',
+        component: Message,
+        exact: true
+    }, 
 ];
 
 export default routes;

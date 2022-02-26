@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+section {
+    position: relative;
+    height: 100vh; 
+    background: #161623;
+    overflow: hidden;
+}
+ 
+.message {
+    height: 100%;
+    width: 100%;
+}
+
+.list-messages {
+    width: 25%;
+    height: 100%;
+    padding-top: 30px;
+    border-right: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 50px;
+    margin-left: 25px;
+    font-family: "SF-Pro-Text-Bold";
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+.list-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 110px;
+    padding-left: 25px; 
+
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+.list-component:hover {
+    opacity: 0.7;
+}
+
+.list-image {
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.list-infos {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "SF-Pro-Text-Semibold";
+    color: #fff;
+    font-size: 25px;
+}
+
+.list-name {
+    margin-bottom: 2.5px;
+}
+
+.list-content {
+    font-family: "SF-Pro-Text-Regular";
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 17.5px;
+}
