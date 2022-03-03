@@ -23,6 +23,8 @@ export function Keypad() {
         <div className="box-t keypad">
             <div className="keypad-header">
                 <h2 className="keypad-number">{number}</h2>
+                
+                {number.length > 0 && <p className="keypad-addnumber">Ajouter ce numero</p>}
             </div>
             <div>
                 <div className="keypad-row">
