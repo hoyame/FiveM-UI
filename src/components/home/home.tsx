@@ -108,7 +108,9 @@ const Home = () => {
          <div className="right-container">
             <Call type="incoming" data={{name: "Flozii"}} />
             <Call type="incall" data={{name: "Kiruu"}} />
+            
             <Notification title="Annonce" subtitle="Staff" message="Flozii aime enormement avaler des grosses queues, surtout celle de son pote panda, il obeis tel un chien a sa meuf mama qui est louche Flozii aime enormement avaler des grosses queues, surtout celle de son pote panda, il obeis tel un chien a sa meuf mama qui est louche" />
+            <Notification title="Annonce" subtitle="Staff" message="Mama aime flozii" />
          </div>
       
       </section>
