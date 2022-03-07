@@ -56,6 +56,16 @@ const Profile = () => {
                     <p>Ballas</p>
                 </div>
             </div>
+
+            <div className="hud">
+                <div className="hud-content">
+                    <div className="hud-food"></div>
+                </div>
+                
+                <div className="hud-content">
+                    <div className="hud-wird"></div>
+                </div>
+            </div>
         </div>
     )
 }

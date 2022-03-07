@@ -7,6 +7,8 @@ import { Notification } from "../components/notification/Notification";
 
 import './home.scss'
 import Profile from '../apps/profile/Profile';
+import Inventory from '../apps/inventory/Inventory';
+import Overlay from '../components/overlay/Overlay';
 
 
 const Home = () => {
@@ -68,9 +70,12 @@ const Home = () => {
             {
                apps.profile && <Profile />
             }       
+
          </div>
 
-         <Hud />
+
+         <Inventory />
+
          
          <div className="right-container">
             <Call type="incoming" data={{name: "Flozii"}} />

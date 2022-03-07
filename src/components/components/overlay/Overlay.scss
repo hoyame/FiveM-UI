@@ -1,0 +1,20 @@
+.overlay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+
+    height: 37.5px;
+
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+    font-size: 15px;
+    font-family: "SF-Pro-Text-Semibold";
+    color: #fff;    
+}
+
+.icon {
+    margin: 0 5px;
+    fill: rgb(15, 177, 177);
+}

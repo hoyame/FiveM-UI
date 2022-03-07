@@ -12,13 +12,6 @@ import "./Menu.scss";
 import "./App.scss";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    font-family: "HapnaSlab", serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://cdn.gamer-network.net/2014/usgamer/GTA-V-PS4-Screenshot-12.jpg');
-  }
- 
   @font-face {
     font-family: 'SF-Pro-Text-Bold';
     src: url(${SFProDisplayBold});
