@@ -4,21 +4,12 @@ import styled, { createGlobalStyle } from "styled-components";
 
 
 import routes from "../routes";
-import Hud from "./components/hud/Hud";
-import Menu from "./components/menu/Menu";
-import { Notification } from "./components/notification/Notification";
-import { Call } from "./components/call/Call";
-import { Keypad } from "./apps/keypad/Keypad";
-
-
 import SFProDisplayBold from '../fonts/SF-Pro-Display-Bold.otf';
 import SFProDisplayRegular from '../fonts/SF-Pro-Display-Regular.otf';
 import SFProDisplaySemibold from '../fonts/SF-Pro-Display-Semibold.otf';
 
 import "./Menu.scss";
 import "./App.scss";
-import Message from "./apps/message/Message";
-import Home from "./home/home";
 
 const GlobalStyle = createGlobalStyle`
   body {

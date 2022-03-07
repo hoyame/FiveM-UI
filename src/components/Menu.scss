@@ -34,7 +34,7 @@
         width: 45px;
     }
     to {
-        width: 512px;
+        width: 242px;
     }
 }
 
@@ -52,6 +52,7 @@
     margin-bottom: 10px;
     border-radius: 15px;
     height: 45px;
+    width: 242px;
     font-size: 18px;
     font-family: 'SF-Pro-Text-Semibold', sans-serif;
     color: #fff;
@@ -72,14 +73,20 @@
 }
 
 .icon-active {
+    height: 15px;
+    margin: 0 1px;
     fill:rgb(103, 206, 103);
 }
 
 .icon-disabled {
+    height: 15px;
+    margin: 0 1px;
     fill:rgba(255, 255, 255, 0.425);
 }
 
 .icon-stop {
+    height: 15px;
+    margin: 0 1px;
     fill:rgb(235, 85, 69);
 }
 
