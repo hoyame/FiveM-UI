@@ -1,5 +1,6 @@
 import React from 'react'
 
+import '../../components/hud/Hud.scss'
 import './Profile.scss';
 
 const Profile = () => {
