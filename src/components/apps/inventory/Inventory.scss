@@ -13,17 +13,118 @@
     
     font-family: "SF-Pro-Text-Bold";
     color: #fff;    
-    background-color: rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(500px);
 }
 
 .inventory-e1 {
     width: 30%;
     height: 100vh;
-    background-color: rgba(255, 0, 0, 0.199);
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 22px;
+    padding-top: 13%;
 }
 
 .inventory-e2 {
     width: 40%;
     height: 100vh;
-    background-color: rgba(0, 81, 255, 0.199);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 22px;
+    padding-top: 13%;
+}
+
+.object {
+    height: 55px;
+    width: 77.5%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    font-family: "SF-Pro-Text-Semibold";
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition-duration: 330ms;
+}
+
+.object:hover {
+    background-color: #fff; color: #000;
+}
+
+.object-icon {
+    height: 32.5px;
+    margin-right: 12.5px;
+}
+
+.object-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 25px;
+    padding: 0 7.5px;
+
+    border-radius: 7.5px;
+    background-color: rgba(0, 0, 0, 0.10);
+
+    font-family: "SF-Pro-Text-Semibold";
+    font-size: 13px;
+}
+
+.items-container {
+    display: block;
+    width: 95%;
+
+}
+
+.item {
+    display: inline-block;
+    height: 120px;
+    width: 115px;
+    margin: 5px 5px;
+    border-radius: 15px;
+    transition-duration: 330ms;
+}
+
+.item:hover {
+    background-color: #fff; color: #000;
+}
+
+.item-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+
+}
+
+.item-icon {
+    height: 45px;
+    width: 45px;
+}
+
+.item-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 25px;
+    padding: 0 7.5px;
+
+    border-radius: 7.5px;
+    background-color: rgba(0, 0, 0, 0.10);
+
+    font-family: "SF-Pro-Text-Semibold";
+    font-size: 13px;
 }
