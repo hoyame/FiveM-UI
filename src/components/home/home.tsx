@@ -16,7 +16,7 @@ const Home = () => {
 
    const [apps, setApps] = useState({
       profile: false,
-      message: false
+      inventory: false
    })
 
    return (
@@ -75,11 +75,11 @@ const Home = () => {
 
 
          {
-            <Inventory />
+            apps.inventory && <Inventory />
          }
 
          
-         <div className="right-container">
+         <div className="right-container" style={{ display: apps.inventory ? 'none' : 'block'  }}>
             <Call type="incoming" data={{name: "Flozii"}} />
             <Call type="incall" data={{name: "Kiruu"}} />
             

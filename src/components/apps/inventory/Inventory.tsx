@@ -28,7 +28,7 @@ const Inventory = () => {
         return (
             <div className='box-t item'>
                 <div className="item-content">
-                    <p>Melcia</p>
+                    <p>Argent</p>
                     <img className="item-icon" src="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"></img>
 
                     <div className="item-count">
@@ -40,7 +40,7 @@ const Inventory = () => {
     }
 
     return (
-        <div className="box-t inventory">
+        <div className="inventory">
             <div className='inventory-e1'>
                 <p style={{marginBottom: 35}}>Object a proximitée</p>
 
@@ -53,6 +53,12 @@ const Inventory = () => {
                 <p style={{marginBottom: 30}}>Inventaire</p>  
                 
                 <div className="items-container">
+                    <ItemComponent />    
+                    <ItemComponent />    
+                    <ItemComponent />    
+                    <ItemComponent />    
+                    <ItemComponent />    
+                    <ItemComponent />    
                     <ItemComponent />    
                     <ItemComponent />    
                     <ItemComponent />    

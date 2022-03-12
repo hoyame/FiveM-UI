@@ -32,6 +32,11 @@ print("start")
 -- end)
 
 
+RegisterCommand("focusNUIInv", function()
+    SetNuiFocus(true, true)
+    TriggerScreenblurFadeIn(100)
+end)
+
 RegisterCommand("focusNUI", function()
     SetNuiFocus(true, true)
 end)
@@ -39,4 +44,6 @@ end)
 
 RegisterCommand("unfocusNUI", function()
     SetNuiFocus(false, false)
+    TriggerScreenblurFadeOut(100)
+
 end)

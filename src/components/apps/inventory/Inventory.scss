@@ -7,13 +7,10 @@
     display: flex;
     flex-direction: row;
 
-
     border-radius: 15px;
-
     
     font-family: "SF-Pro-Text-Bold";
     color: #fff;    
-    backdrop-filter: blur(500px);
 }
 
 .inventory-e1 {
@@ -25,7 +22,7 @@
     align-items: center;
 
     font-size: 22px;
-    padding-top: 13%;
+    padding-top: 12%;
 }
 
 .inventory-e2 {
@@ -33,10 +30,9 @@
     height: 100vh;
     display: flex; 
     flex-direction: column;
-    align-items: center;
-
+    text-align: center;
     font-size: 22px;
-    padding-top: 13%;
+    padding-top: 12%;
 }
 
 .object {
@@ -81,8 +77,6 @@
 
 .items-container {
     display: block;
-    width: 95%;
-
 }
 
 .item {
