@@ -1,0 +1,56 @@
+.bank {
+    position: absolute; 
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    margin-top: 7.5%;
+
+    
+    font-family: "SF-Pro-Text-Bold";
+    color: #fff;    
+}
+
+.bank-content {
+    margin-top: -15%;
+
+    background-color: red;
+    height: 65%;
+    width: 60%;
+}
+
+.bank-d1 {
+    height: 100%;
+    width: 40%;
+    background-color: purple;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.bank-card {
+    height: 200px;
+    width: 85%;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+.bank-balance {
+    height: 90px;
+    width: 85%; 
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.bank-balance-amount {
+    font-size: 28px;
+}
