@@ -7,11 +7,16 @@ import routes from "../routes";
 import SFProDisplayBold from '../fonts/SF-Pro-Display-Bold.otf';
 import SFProDisplayRegular from '../fonts/SF-Pro-Display-Regular.otf';
 import SFProDisplaySemibold from '../fonts/SF-Pro-Display-Semibold.otf';
+import CreditFont from '../fonts/credit.ttf';
 
 import "./Menu.scss";
 import "./App.scss";
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Credit-Fonts';
+    src: url(${CreditFont});
+  }
   @font-face {
     font-family: 'SF-Pro-Text-Bold';
     src: url(${SFProDisplayBold});
