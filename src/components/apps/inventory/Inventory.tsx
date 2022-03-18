@@ -41,17 +41,14 @@ const Inventory = () => {
 
     const UserComponent = () => {
         return (
-            <div className="user-container">
-                <div className="box-t user">
-                    <svg className="user-icon" width="50" height="50" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.00879 8.5752C9.9248 8.5752 11.5508 6.87012 11.5508 4.66406C11.5508 2.51074 9.91602 0.858398 8.00879 0.858398C6.09277 0.858398 4.44922 2.53711 4.45801 4.68164C4.45801 6.87012 6.08398 8.5752 8.00879 8.5752ZM2.52441 16.749H13.4756C14.9258 16.749 15.4268 16.3096 15.4268 15.501C15.4268 13.2422 12.5615 10.1309 8 10.1309C3.44727 10.1309 0.573242 13.2422 0.573242 15.501C0.573242 16.3096 1.07422 16.749 2.52441 16.749Z" />
-                    </svg>
-
-
+            <div className="box-t object">
+                <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                    <p>Melciaaa</p>
                 </div>
 
-                <p className="user-name">Argent</p>
-
+                <div className="object-count">
+                    2
+                </div>
             </div>
         )
     }
@@ -83,14 +80,6 @@ const Inventory = () => {
                     <ItemComponent />    
                     <ItemComponent />    
                 </div> 
-            </div>
-
-            <div className='inventory-e1'>
-                <p style={{marginBottom: 30}}>Personnes a proximitée</p>  
-
-                <div className="user-container">
-                    <UserComponent />   
-                </div>
             </div>
         </div>
     )
