@@ -135,15 +135,19 @@
 }
 
 .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 70px;
     width: 70px;
-    border-radius: 50px;
+    border-radius: 15px;
     margin-bottom: 5px;
 }
 
 .user-icon {
     margin: 0;
-    fill: #9da3b0;
+    fill: #fff;
 }
 
 .user-name {
