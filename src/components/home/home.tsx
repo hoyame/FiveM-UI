@@ -18,7 +18,7 @@ const Home = () => {
    const [apps, setApps] = useState({
       profile: false,
       inventory: false,
-      bank: true
+      bank: false
    })
 
    const [oldApp, setOldApp] = useState("")
