@@ -10,6 +10,7 @@ import Profile from '../apps/profile/Profile';
 import Overlay from '../components/overlay/Overlay';
 import Bank from '../apps/bank/Bank';
 import Inventory from '../apps/inventory/Inventory';
+import Notifications from '../apps/notifications/Notifications';
 
 
 const Home = () => {
@@ -18,7 +19,8 @@ const Home = () => {
    const [apps, setApps] = useState({
       profile: false,
       inventory: false,
-      bank: false
+      bank: false,
+      notif: false
    })
 
    const [oldApp, setOldApp] = useState("")
@@ -91,8 +93,12 @@ const Home = () => {
          {
             apps.bank && <Bank />
          }
+
+         {
+            apps.notif && <Notifications />
+         }
          
-         <div className="right-container" style={{ display: apps.inventory || apps.bank ? 'none' : 'block'  }}>
+         <div className="right-container" style={{ display: apps.inventory || apps.bank || apps.notif ? 'none' : 'block'  }}>
             <Call type="incoming" data={{name: "Flozii"}} />
             <Call type="incall" data={{name: "Kiruu"}} />
             

@@ -1,0 +1,19 @@
+.notifications {
+    position: absolute; 
+
+    height: calc(100% - 20px);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+
+    align-items: center;
+
+    border-radius: 21.67px;
+    margin-top: 7.5%;
+    overflow-y: scroll;
+    
+    font-family: "SF-Pro-Text-Bold";
+    color: #fff;    
+}

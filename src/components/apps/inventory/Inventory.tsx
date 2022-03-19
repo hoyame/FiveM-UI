@@ -55,13 +55,7 @@ const Inventory = () => {
 
     return (
         <div className="inventory">
-            <div className='inventory-e1'>
-                <p style={{marginBottom: 35}}>Object a proximitée</p>
-
-                <ObjectComponent name='Argent Propre' count="10" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
-                <ObjectComponent name='Argent Sale' count="1000" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
-                <ObjectComponent name='Argent' count="10000000" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
-            </div>
+      
 
             <div className='inventory-e2'>
                 <p style={{marginBottom: 30}}>Inventaire</p>  
@@ -80,6 +74,14 @@ const Inventory = () => {
                     <ItemComponent />    
                     <ItemComponent />    
                 </div> 
+            </div>
+
+            <div className='inventory-e1'>
+                <p style={{marginBottom: 35}}>Object a proximitée</p>
+
+                <ObjectComponent name='Argent Propre' count="10" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
+                <ObjectComponent name='Argent Sale' count="1000" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
+                <ObjectComponent name='Argent' count="10000000" icon="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"/>
             </div>
         </div>
     )
