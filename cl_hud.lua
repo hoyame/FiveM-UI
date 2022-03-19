@@ -41,7 +41,6 @@ RegisterCommand("focusNUI", function()
     SetNuiFocus(true, true)
 end)
 
-
 RegisterCommand("unfocusNUI", function()
     SetNuiFocus(false, false)
     TriggerScreenblurFadeOut(100)
