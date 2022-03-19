@@ -87,7 +87,7 @@ const Bank = () => {
 
                             </div>
 
-                            <p style={{fontSize: 13}}>Deposer</p>
+                            <p style={{fontSize: 15}}>Deposer</p>
                         </div>
 
                         <div className='box-t bank-button'>
@@ -98,7 +98,7 @@ const Bank = () => {
 
                             </div>
 
-                            <p style={{fontSize: 13}}>Retirer</p>
+                            <p style={{fontSize: 15}}>Retirer</p>
                         </div>
 
                         <div className='box-t bank-button'>
@@ -108,7 +108,7 @@ const Bank = () => {
                                 </svg>
                             </div>
 
-                            <p style={{fontSize: 13}}>Deposer</p>
+                            <p style={{fontSize: 15}}>Transferer</p>
                         </div>
                     </div>
                 </div>
