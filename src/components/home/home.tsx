@@ -19,7 +19,7 @@ const Home = () => {
    const [apps, setApps] = useState({
       profile: false,
       inventory: false,
-      bank: false,
+      bank: true,
       notif: false
    })
 

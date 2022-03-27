@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './Bank.scss'
 
@@ -11,21 +11,48 @@ const Bank = () => {
         );
     }
 
-    const TransactionComponent = () => {
+    interface ITransaction {
+        type?: number;
+        montant: number;
+        source?: string; 
+    }
+
+    const TransactionComponent = (fruitCrush: ITransaction) => {
+        const [nameTransction, setNameTransaction] = useState("Depot")
+        const [color, setColor] = useState("ff453a")
+
+        useEffect(() => {
+            if (fruitCrush.type == 1) {
+                // depot
+                setNameTransaction("Depot")
+                setColor("#34c759")
+            } else if (fruitCrush.type == 2) {
+                // retrait
+                setNameTransaction("Retrait")
+                setColor("#ff453a")
+            } else if (fruitCrush.type == 3) {
+                // payement
+                setNameTransaction("Payement")
+                setColor("#32ade6")
+
+            }
+    
+        }, [])
+
         return (
             <div className='bank-transaction'>
-                <div className='bank-transaction-icon'>
+                <div className='bank-transaction-icon' style={{backgroundColor: color}}>
                     <DeposerSvg />
                 </div>
 
                 <div className='bank-transaction-container'>
                     <div className='bank-transaction-content'>
-                        <p>Depot</p>
+                        <p>{nameTransction}</p>
                         <p style={{fontSize: 12, opacity: 0.5}}>Banque</p>
                     </div>
 
                     <div className='bank-transaction-amount'>
-                        100 $
+                        {fruitCrush.montant} $
                     </div>
 
                 </div>
@@ -78,13 +105,9 @@ const Bank = () => {
                     <div className="bank-buttons">
                         <div className='box-t bank-button'>
                             <div className='bank-button-icon-container'>
-                                
-
-                                <svg className="bank-button-icon"  width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 16.5381C7.5625 16.5381 7.95801 16.1426 7.95801 15.5625V7.37988L7.87012 5.53418L10.2168 8.10938L12.0273 9.88477C12.2031 10.0605 12.4492 10.1748 12.7217 10.1748C13.249 10.1748 13.6445 9.7793 13.6445 9.23438C13.6445 8.97949 13.5391 8.74219 13.3281 8.53125L7.71191 2.96777C7.57129 2.81836 7.39551 2.71289 7.20215 2.67773H12.792C13.3369 2.67773 13.7324 2.27344 13.7324 1.72852C13.7324 1.18359 13.3369 0.779297 12.792 0.779297H1.18164C0.645508 0.779297 0.258789 1.18359 0.258789 1.72852C0.258789 2.27344 0.645508 2.67773 1.18164 2.67773H6.78906C6.5957 2.71289 6.41992 2.81836 6.2793 2.96777L0.663086 8.53125C0.452148 8.74219 0.355469 8.97949 0.355469 9.23438C0.355469 9.7793 0.742188 10.1748 1.27832 10.1748C1.55078 10.1748 1.78809 10.0693 1.97266 9.88477L3.77441 8.10938L6.12109 5.52539L6.0332 7.37988V15.5625C6.0332 16.1426 6.42871 16.5381 7 16.5381Z" />
+                                <svg className="bank-button-icon" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.18164 14.6396C0.645508 14.6396 0.258789 15.0439 0.258789 15.5889C0.258789 16.1338 0.645508 16.5381 1.18164 16.5381H12.792C13.3369 16.5381 13.7324 16.1338 13.7324 15.5889C13.7324 15.0439 13.3369 14.6396 12.792 14.6396H7.20215C7.39551 14.6045 7.57129 14.499 7.71191 14.3496L13.3281 8.78613C13.5391 8.5752 13.6445 8.33789 13.6445 8.08301C13.6445 7.53809 13.249 7.14258 12.7217 7.14258C12.4492 7.14258 12.2031 7.25684 12.0273 7.43262L10.2168 9.20801L7.87012 11.7832L7.95801 9.9375V1.75488C7.95801 1.1748 7.5625 0.779297 7 0.779297C6.42871 0.779297 6.0332 1.1748 6.0332 1.75488V9.9375L6.12109 11.792L3.77441 9.20801L1.97266 7.43262C1.78809 7.24805 1.55078 7.14258 1.27832 7.14258C0.742188 7.14258 0.355469 7.53809 0.355469 8.08301C0.355469 8.33789 0.452148 8.5752 0.663086 8.78613L6.2793 14.3496C6.41992 14.499 6.5957 14.6045 6.78906 14.6396H1.18164Z" />
                                 </svg>
-
-
                             </div>
 
                             <p style={{fontSize: 15}}>Deposer</p>
@@ -92,10 +115,9 @@ const Bank = () => {
 
                         <div className='box-t bank-button'>
                             <div className='bank-button-icon-container' style={{backgroundColor: "#ff453a"}}>
-                                <svg className="bank-button-icon" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.18164 14.6396C0.645508 14.6396 0.258789 15.0439 0.258789 15.5889C0.258789 16.1338 0.645508 16.5381 1.18164 16.5381H12.792C13.3369 16.5381 13.7324 16.1338 13.7324 15.5889C13.7324 15.0439 13.3369 14.6396 12.792 14.6396H7.20215C7.39551 14.6045 7.57129 14.499 7.71191 14.3496L13.3281 8.78613C13.5391 8.5752 13.6445 8.33789 13.6445 8.08301C13.6445 7.53809 13.249 7.14258 12.7217 7.14258C12.4492 7.14258 12.2031 7.25684 12.0273 7.43262L10.2168 9.20801L7.87012 11.7832L7.95801 9.9375V1.75488C7.95801 1.1748 7.5625 0.779297 7 0.779297C6.42871 0.779297 6.0332 1.1748 6.0332 1.75488V9.9375L6.12109 11.792L3.77441 9.20801L1.97266 7.43262C1.78809 7.24805 1.55078 7.14258 1.27832 7.14258C0.742188 7.14258 0.355469 7.53809 0.355469 8.08301C0.355469 8.33789 0.452148 8.5752 0.663086 8.78613L6.2793 14.3496C6.41992 14.499 6.5957 14.6045 6.78906 14.6396H1.18164Z" />
+                                <svg className="bank-button-icon"  width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 16.5381C7.5625 16.5381 7.95801 16.1426 7.95801 15.5625V7.37988L7.87012 5.53418L10.2168 8.10938L12.0273 9.88477C12.2031 10.0605 12.4492 10.1748 12.7217 10.1748C13.249 10.1748 13.6445 9.7793 13.6445 9.23438C13.6445 8.97949 13.5391 8.74219 13.3281 8.53125L7.71191 2.96777C7.57129 2.81836 7.39551 2.71289 7.20215 2.67773H12.792C13.3369 2.67773 13.7324 2.27344 13.7324 1.72852C13.7324 1.18359 13.3369 0.779297 12.792 0.779297H1.18164C0.645508 0.779297 0.258789 1.18359 0.258789 1.72852C0.258789 2.27344 0.645508 2.67773 1.18164 2.67773H6.78906C6.5957 2.71289 6.41992 2.81836 6.2793 2.96777L0.663086 8.53125C0.452148 8.74219 0.355469 8.97949 0.355469 9.23438C0.355469 9.7793 0.742188 10.1748 1.27832 10.1748C1.55078 10.1748 1.78809 10.0693 1.97266 9.88477L3.77441 8.10938L6.12109 5.52539L6.0332 7.37988V15.5625C6.0332 16.1426 6.42871 16.5381 7 16.5381Z" />
                                 </svg>
-
                             </div>
 
                             <p style={{fontSize: 15}}>Retirer</p>
@@ -124,14 +146,9 @@ const Bank = () => {
                         </div>
 
                         <div className='scroll-transactions'>
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
-                            <TransactionComponent />
+                            <TransactionComponent type={1} montant={400} />
+                            <TransactionComponent type={2} montant={4239000} />
+                  
                         </div>
                     </div>
                 </div>
