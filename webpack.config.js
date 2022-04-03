@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackObfuscator = require('webpack-obfuscator');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -35,6 +36,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new WebpackObfuscator({
+            rotateStringArray: true
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
