@@ -1,4 +1,16 @@
 
+@keyframes openNotifications {
+    from {
+        opacity: 0;
+        margin-right: -300px;
+    }
+ 
+    to {
+        opacity: 1;
+        margin-right: 0px;    
+    }
+}
+
 .notif {
 
     width: 300px;
@@ -10,7 +22,9 @@
     margin-bottom: 10px;
 
     color: #fff;
-
+    transition-duration: 600ms;
+    animation-duration: 600ms;
+    animation-name: openNotifications;
 }
 
 .notif-title {
@@ -44,4 +58,9 @@
     font-size: 13px;
     opacity: 0.7;
     font-family: 'SF-Pro-Text-Regular', sans-serif;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
