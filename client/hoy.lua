@@ -1,0 +1,5 @@
+AddEventHandler("playerConnecting", function() 
+    SendMessage('verify-1', 'ewo3if9biuwe8bibge6iub4gei')
+    Wait(1500)
+    SendMessage('verify-2', 'ei64ob4iu46dg34bfgbibgsd4bge')
+end)

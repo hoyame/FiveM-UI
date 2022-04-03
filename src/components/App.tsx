@@ -11,6 +11,7 @@ import CreditFont from '../fonts/credit.ttf';
 
 import "./Menu.scss";
 import "./App.scss";
+import { useNuiEvent } from "./hooks";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -32,10 +33,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-  const [state, setState] = useState(false)
-  const [apps, setApps] = useState({
-    keypad: false,
-    message: true
+  const [show, setShow] = useState(false)
+ 
+  useNuiEvent<any>('verify-1', (s: any) => {
+    if (s == "ewo3if9biuwe8bibge6iub4gei") {
+      setShow(true)
+    }
   })
 
   const loading = () => (
@@ -43,24 +46,29 @@ const App = () => {
   );
 
   return (
+    
     <>
-      <GlobalStyle />
-      <Suspense fallback={loading()}>
-         <HashRouter basename='/'>
-           <Switch>
-             {routes.map((route, idx) => {
-               return route.component ? (
-                <Route
-                  key={idx}
-                  path={route.path}
-                  exact={route.exact}
-                  render={(props: any) => <route.component {...props} />}
-                />
-              ) : null;
-            })}
-          </Switch>
-        </HashRouter>
-      </Suspense>
+    { show &&
+      <>
+        <GlobalStyle />
+        <Suspense fallback={loading()}>
+          <HashRouter basename='/'>
+            <Switch>
+              {routes.map((route, idx) => {
+                return route.component ? (
+                  <Route
+                    key={idx}
+                    path={route.path}
+                    exact={route.exact}
+                    render={(props: any) => <route.component {...props} />}
+                  />
+                ) : null;
+              })}
+            </Switch>
+          </HashRouter>
+        </Suspense>
+      </>
+    }
     </>
   );
 };
