@@ -29,6 +29,36 @@ RegisterCommand("bank", function()
     })
 end)
 
+function autoSetBank()
+    SendMessage('bank-data', {
+        id = 1,   -- id of the bank or player
+        cash = 1156100,
+        balance = 3136541,
+        transactions = {
+            {
+                type = 3, -- 1 = deposit, 2 = retrait, 3 = payement
+                amount = 10000,
+                source = "LTD"
+            },
+            {
+                type = 3, -- 1 = deposit, 2 = retrait, 3 = payement
+                amount = 5000000,
+                source = "Concessionaire"
+            },
+            {
+                type = 1, -- 1 = deposit, 2 = retrait, 3 = payement
+                amount = 9000000,
+                source = "Banque"
+            },
+            {
+                type = 2, -- 1 = deposit, 2 = retrait, 3 = payement
+                amount = 100000,
+                source = "Banque"
+            },
+        }
+    })
+end
+
 -------------------------------------------------------------------------------
 
 -- config file for bank

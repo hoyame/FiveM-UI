@@ -1,7 +1,19 @@
-AddEventHandler("playerConnecting", function() 
-    SendMessage('verify-1', 'ewo3if9biuwe8bibge6iub4gei')
+AddEventHandler("onResourceStart", function(resourceName) 
+
+    print('The resource ' .. resourceName .. ' has been started.')
+
+    SendMessage('negozingoizngzongge1651gg1e3gs1g6g51s6gogn', 'ez54ge1g6531hez1h1h365zh6hgg')
+    SendMessage('zg54z5g4z6g41z1g6z1zf16z5f165z1fz1f61zf61g', 'ewo3if9biuwe8bibge6iub4geggi')
     Wait(1500)
-    SendMessage('verify-2', 'ei64ob4iu46dg34bfgbibgsd4bge')
+    SendMessage('5z56f165f161f65a16f6az1f6a16f161f6a1f6z1af', 'ei64ob4iu46dg34bfgbibgsd4bge')
+
+    print('The resource ' .. resourceName .. ' has been started.')
+
+    Wait(5000)
+
+    autoSetBank()
+    setAutoProfile()
+    setAutoInventory()
 end)
 
 

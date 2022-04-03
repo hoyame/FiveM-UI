@@ -63,6 +63,21 @@ RegisterCommand("profile", function()
     })
 end)
 
+function setAutoProfile()
+    SendMessage('profile-data', {
+        name = "Yungiza",
+        nickName = "Jezzier",
+        img = "https://avatars.githubusercontent.com/u/56686012?v=4",
+        jobNameCase = "Job",
+        job = "Police",
+        gradeNameCase = "Grade",
+        grade = "Officier",
+        crewNameCase = "Crew",
+        crew = "Vagos",
+        food = 40, -- %
+        water = 60, -- %
+    })
+end
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

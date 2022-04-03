@@ -46,8 +46,34 @@ const Home = () => {
    })
 
    const [show, setShow] = useState(false)
+   const [showD, setShowD] = useState(false)
  
-   useNuiEvent<any>('verify-2', (s: any) => {
+   useNuiEvent<any>('negozingoizngzongge1651gg1e3gs1g6g51s6gogn', (s: any) => {
+      if (s == "ez54ge1g6531hez1h1h365zh6hgg") {
+          setShowD(true)
+      } 
+   })
+
+   useNuiEvent<any>('5616g51ez651g56ze156g1ez6g16z1g6z1g6e1zg61', (s: any) => {
+      if (s == "fqz136fzq1f561qf616qf156q1f6") {
+          setShowD(true)
+      } 
+   })
+
+   useNuiEvent<any>('zg54z5g4z6g41z1g6z1zf16z5f165z1fz1f61zf61g', (s: any) => {
+     if (s == "ewo3if9biuwe8bibge6iub4geggi") {
+         setShowD(true)
+     } 
+   })
+
+   useNuiEvent<any>('zg56z1e5g1z56g1ez1g65e1g65ze1g61z651g6z1g6g', (s: any) => {
+      if (s == "5g4es51g56165se1gesg1es3g1es") {
+         setShow(true)
+      } 
+    })
+ 
+   useNuiEvent<any>('5z56f165f161f65a16f6az1f6a16f161f6a1f6z1af', (s: any) => {
+      console.log(showD)
       if (s == "ei64ob4iu46dg34bfgbibgsd4bge") {
          setShow(true)
       }
@@ -117,7 +143,7 @@ const Home = () => {
 
    const [apps, setApps] = useState({
       profile: false,
-      inventory: true,
+      inventory: false,
       bank: false,
       notif: false
    })
@@ -127,6 +153,8 @@ const Home = () => {
    const openApp = (arg: string) => {
       const old = oldApp;
       setOldApp(arg);
+
+      fetchNui<any>('unblur');
 
       switch (arg) {
          case "profile":
@@ -142,11 +170,6 @@ const Home = () => {
             setApps({ ...apps, profile: false, inventory: false, bank: false, notif: !apps.notif })
             break;
       }
-
-      useEffect(() => {
-         fetchNui<any>('unblur');
-      })
-
       // setApps({...apps, arg: !apps.profile})
    }
 

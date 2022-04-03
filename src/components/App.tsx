@@ -33,22 +33,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-  const [show, setShow] = useState(false)
- 
-  useNuiEvent<any>('verify-1', (s: any) => {
-    if (s == "ewo3if9biuwe8bibge6iub4gei") {
-      setShow(true)
-    }
-  })
-
   const loading = () => (
     <div className="">Chargement...</div>
   );
 
   return (
-    
     <>
-    { show &&
       <>
         <GlobalStyle />
         <Suspense fallback={loading()}>
@@ -68,7 +58,6 @@ const App = () => {
           </HashRouter>
         </Suspense>
       </>
-    }
     </>
   );
 };

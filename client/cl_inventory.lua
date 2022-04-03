@@ -21,6 +21,29 @@ RegisterCommand("inventory-send", function()
     })
 end)
 
+function setAutoInventory()
+    SendMessage('inventory-data', {
+        id = 1,   -- number of phone or server id / id for call
+        items = {
+            {
+                name = "Argent",
+                icon = "https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true",
+                count = 1,
+                idItem = "cash"
+            }
+        },
+
+        proxItems = {
+            {
+                name = "Argent",
+                icon = "https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true",
+                count = 1,
+                idItem = "cash"
+            } 
+        }
+    })
+end
+
 -------------------------------------------------------------------------------
 
 -- config file for bank
