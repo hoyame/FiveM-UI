@@ -12,5 +12,5 @@ files {
 
 
 client_scripts {
-    "cl_hud.lua",
+    "client/*.lua",
 }
