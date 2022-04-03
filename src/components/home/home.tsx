@@ -73,7 +73,6 @@ const Home = () => {
     })
  
    useNuiEvent<any>('5z56f165f161f65a16f6az1f6a16f161f6a1f6z1af', (s: any) => {
-      console.log(showD)
       if (s == "ei64ob4iu46dg34bfgbibgsd4bge") {
          setShow(true)
       }
