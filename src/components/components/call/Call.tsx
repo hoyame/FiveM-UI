@@ -133,6 +133,7 @@ export function InCall(props: IInCall) {
 
                 <div className="call-refuse" style={{marginRight: 0}} onClick={() => {
                     fetchNui<any>('end-call', { id: props.id })
+                    endCall()
                 }}>
                     <svg className="call-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.859 33.817">
                         <g transform="translate(-6.854 51.611)">

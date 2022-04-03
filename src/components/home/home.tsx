@@ -39,9 +39,18 @@ const Home = () => {
       transactions: []
    })
 
+   const [items, setItems] = useState({
+      id: 0,
+      items: [],
+      proxItems: []
+   })
+
+
+
    useEffect(() => {
       setInterval(() => {
          setInComingCall({ name: "", id: 0 });
+         setInCall({ name: "", id: 0 });
       }, 10000)
    }, [])
  
@@ -58,6 +67,14 @@ const Home = () => {
 
       setNotifications({
          ...notifications.list, list: x
+      })
+   })
+
+   useNuiEvent<any>('inventory-data', (s: any) => {
+      let d: any = s;
+
+      setItems({
+         ...items, items: d.items, proxItems: d.proxItems, id: d.id
       })
    })
 
@@ -94,7 +111,7 @@ const Home = () => {
 
    const [apps, setApps] = useState({
       profile: false,
-      inventory: false,
+      inventory: true,
       bank: false,
       notif: false
    })
@@ -168,7 +185,7 @@ const Home = () => {
          </div>
 
          {
-            apps.inventory && <Inventory />
+            apps.inventory && <Inventory id={items.id} items={items.items} proxItems={items.proxItems} />
          }
 
          {

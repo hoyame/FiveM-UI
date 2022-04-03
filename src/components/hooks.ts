@@ -71,8 +71,6 @@ export const useNuiEvent = <T = any>(
       },
       body: JSON.stringify(data),
     };
-
-    console.log(`data: ${data.id}`);
   
     const resourceName = (window as any).GetParentResourceName ? (window as any).GetParentResourceName() : 'nui-frame-app';
   

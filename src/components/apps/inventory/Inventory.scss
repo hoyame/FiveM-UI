@@ -30,7 +30,7 @@
 }
 
 .inventory-e1 {
-    width: 40%;
+    width: 37.5%;
     height: 100vh;
 
     display: flex; 
@@ -38,17 +38,17 @@
     align-items: center;
 
     font-size: 22px;
-    padding-top: 5%;
+    padding-top: 3.5%;
 }
 
 .inventory-e2 {
-    width: 57.5%;
+    width: 64%;
     height: 100vh;
     display: flex; 
     flex-direction: column;
     text-align: center;
     font-size: 22px;
-    padding-top: 5%;
+    padding-top: 3.5%;
 }
 
 .object {
@@ -113,6 +113,8 @@
 
 .item {
     display: inline-block;
+    vertical-align:top;
+
     height: 120px;
     width: 115px;
     margin: 5px 5px;
