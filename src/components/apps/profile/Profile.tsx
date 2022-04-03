@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import '../../components/hud/Hud.scss'
+import { useNuiEvent } from '../../hooks';
 import './Profile.scss';
 
-const Profile = () => {
+interface IProfile {
+    data: any
+}
+
+const Profile = (data: IProfile) => {
+
+
     return (
         <div className="box-t profile">
             <div className="profile-content">
-                <img className="profile-image" src="https://avatars.githubusercontent.com/u/56686012?v=4"></img>
+                <img className="profile-image" src={data.data.img}></img>
                 <div className="profile-informations">
-                    <p className="profile-name">Hoyame</p>
-                    <p className="profile-grade">Zouhari</p>
+                    <p className="profile-name">{data.data.name}</p>
+                    <p className="profile-grade">{data.data.nickName}</p>
 
                     <div className="profile-badges">
                         <svg className="icon-disabled" width="17" height="17" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -43,28 +50,28 @@ const Profile = () => {
             <div className="profile-other">
 
                 <div className="profile-o">
-                    <p className="profile-o-title">Job</p>
-                    <p>Mineur</p>
+                    <p className="profile-o-title">{data.data.jobNameCase}</p>
+                    <p>{data.data.job}</p>
                 </div>
 
                 <div className="profile-o">
-                    <p className="profile-o-title">Grade</p>
-                    <p>Patron</p>
+                    <p className="profile-o-title">{data.data.gradeNameCase}</p>
+                    <p>{data.data.grade}</p>
                 </div>
 
                 <div className="">
-                    <p className="profile-o-title">Crew</p>
-                    <p>Ballas</p>
+                    <p className="profile-o-title">{data.data.crewNameCase}</p>
+                    <p>{data.data.crew}</p>
                 </div>
             </div>
 
             <div className="hud">
                 <div className="hud-content">
-                    <div className="hud-food"></div>
+                    <div className="hud-food" style={{width: data.data.food + '%'}}></div>
                 </div>
                 
                 <div className="hud-content">
-                    <div className="hud-wird"></div>
+                    <div className="hud-wird" style={{width: data.data.water + '%'}}></div>
                 </div>
             </div>
         </div>
