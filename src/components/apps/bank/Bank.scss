@@ -1,3 +1,14 @@
+
+@keyframes openBank {
+    from {
+        opacity: 0;
+    }
+ 
+    to {
+        opacity: 1;
+    }
+}
+
 .bank {
     position: absolute; 
 
@@ -15,7 +26,10 @@
 
     
     font-family: "SF-Pro-Text-Bold";
-    color: #fff;    
+    color: #fff;   
+
+    animation-duration: 1200ms;
+    animation-name: openBank;
 }
 
 .bank-content {
