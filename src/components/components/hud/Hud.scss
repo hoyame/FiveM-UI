@@ -23,7 +23,7 @@
 
 .hud-food {
     height: 9px;
-    width: 30%;
+    max-width: 100%;
     border-radius: 10px;
 
     background-color: rgb(103, 206, 103);
@@ -34,7 +34,7 @@
 
 .hud-wird {
     height: 9px;
-    width: 40%;
+    max-width: 100%;
     border-radius: 10px;
 
     background-color: #1977db;
