@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Inventory.scss'
 
@@ -10,8 +10,10 @@ const Inventory = () => {
     }
 
     const ObjectComponent = (props: IObjectComponent) => {
+        const [state, setState] = useState(false);
+
         return (
-            <div className="box-t object">
+            <div className="box-t object" onClick={() => setState(!state)}>
                 <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                     <img className="object-icon" src={props.icon}></img>
                     <p>{props.name}</p>
@@ -20,13 +22,24 @@ const Inventory = () => {
                 <div className="object-count">
                     {props.count}
                 </div>
+
+                { state &&
+
+                    <div className="box-t menu-obj">
+                        <p>Utiliser</p>
+                        <p>Donner</p>
+                        <p>Jeter</p>
+                    </div>
+                }
             </div>
         )
     }
 
     const ItemComponent = () => {
+        const [state, setState] = useState(false);
+
         return (
-            <div className='box-t item'>
+            <div className='box-t item' onClick={() => setState(!state)}>
                 <div className="item-content">
                     <p>Argent</p>
                     <img className="item-icon" src="https://github.com/PichotM/RPG-Inventory-UI/blob/master/ui/assets/img/items/money.png?raw=true"></img>
@@ -35,20 +48,15 @@ const Inventory = () => {
                         100
                     </div>
                 </div>
-            </div>
-        )
-    }
 
-    const UserComponent = () => {
-        return (
-            <div className="box-t object">
-                <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                    <p>Melciaaa</p>
-                </div>
+                {   state &&
 
-                <div className="object-count">
-                    2
-                </div>
+                    <div className="box-t menu">
+                        <p>Utiliser</p>
+                        <p>Donner</p>
+                        <p>Jeter</p>
+                    </div>
+                }
             </div>
         )
     }

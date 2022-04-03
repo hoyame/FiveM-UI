@@ -1,3 +1,14 @@
+
+@keyframes openInventory {
+    from {
+        opacity: 0;
+    }
+ 
+    to {
+        opacity: 1;
+    }
+}
+
 .inventory {
     position: absolute; 
 
@@ -13,6 +24,9 @@
     
     font-family: "SF-Pro-Text-Bold";
     color: #fff;    
+
+    animation-duration: 1200ms;
+    animation-name: openInventory;
 }
 
 .inventory-e1 {
@@ -169,5 +183,56 @@
 .user-name {
     font-size: 15px;
     font-family: "SF-Pro-Text-Semibold";
+}
 
+.menu {
+    position: absolute;
+    padding: 12.5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 80px;
+    width: 70px;
+    margin-left: 87.5px;
+    margin-top: -97.5px;
+    border-radius: 18.5px;
+    font-family: "SF-Pro-Text-Bold";
+
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    transition-duration: 300ms;
+}
+
+.menu-obj {
+    position: absolute;
+    padding: 12.5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 80px;
+    width: 70px;
+    margin-left: 377.5px;
+    margin-top: -5.5px;
+    border-radius: 18.5px;
+    font-family: "SF-Pro-Text-Bold";
+
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    transition-duration: 300ms;
+}
+
+.menu-obj p:hover {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.menu p:hover {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
