@@ -12,9 +12,6 @@ AddEventHandler("onResourceStart", function(resourceName)
 end)
 
 
-
-
-
 RegisterNUICallback('blur', function(data, cb)
     TriggerScreenblurFadeIn(100)
     DisplayRadar(false)
@@ -48,3 +45,13 @@ RegisterCommand("unfocusNUI", function()
     TriggerScreenblurFadeOut(100)
     DisplayRadar(true)
 end)
+
+RegisterCommand("+focus", function()
+    SetNuiFocus(true, true)
+end)
+
+RegisterCommand("-focus", function()
+    -- SetNuiFocus(false, false)
+end)
+
+RegisterKeyMapping("+focus", "F", "keyboard", "A")

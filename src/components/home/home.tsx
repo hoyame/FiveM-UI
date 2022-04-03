@@ -15,6 +15,13 @@ import { fetchNui, useNuiEvent } from '../hooks';
 
 
 const Home = () => {
+   window.addEventListener("keyup", (e) => {
+      // console.log(e.keyCode)  
+      if (e.keyCode == 222) {
+         fetchNui<any>('unfocus');
+      }
+   })
+
    const [notifications, setNotifications] = useState({ list: [] });
    const [inComingCall, setInComingCall] = useState({ name: "", id: 0  });
    const [inCall, setInCall] = useState({ name: "", id: 0 });
