@@ -43,24 +43,6 @@ const App = () => {
   );
 
   return (
-    // <div className="app-backround">
-    //   <Suspense fallback={loading()}>
-    //     <HashRouter basename='/'>
-    //       <Switch>
-    //         {routes.map((route, idx) => {
-    //           return route.component ? (
-    //             <Route
-    //               key={idx}
-    //               path={route.path}
-    //               exact={route.exact}
-    //               render={(props: any) => <route.component {...props} />}
-    //             />
-    //           ) : null;
-    //         })}
-    //       </Switch>
-    //     </HashRouter>
-    //   </Suspense>
-    // </div>
     <>
       <GlobalStyle />
       <Suspense fallback={loading()}>
